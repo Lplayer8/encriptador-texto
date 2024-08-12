@@ -11,7 +11,7 @@ html {
     font-size: 62.5%;
 }
 body {
-    background-image: url(/assets/img/fondo-perrito.gif);
+    background-image: url(../assets/img/fondo-perrito.gif);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;

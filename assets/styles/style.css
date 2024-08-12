@@ -1,0 +1,217 @@
+:root {
+    --dark-blue: #0A3871;
+    --light-blue: #D8DFE8;
+    --main-color: #F3F5FC;
+    --yellow: #FFD200;
+    --inter-font: "Inter", sans-serif;
+    --fondo-deshab: #cccccc;
+    --color-deshab: #666666;
+}
+html {
+    font-size: 62.5%;
+}
+body {
+    background-image: url(/assets/img/fondo-perrito.gif);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-family: var(--inter-font);
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+main {
+    display: flex;
+    justify-content: space-around;
+    flex: 1;
+}
+
+header {
+    margin-bottom: 5rem;
+    width: 60%;
+}
+
+header img {
+    width: 120px;
+    height: 48px;
+}
+
+.form__section {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 70dvh;
+}
+
+.form__input {
+    width: 100%;
+    max-width: 577px;
+    height: 64dvh;
+    border-color: var(--light-blue);
+    border-width: 0.2rem;
+    background: transparent;
+    color: var(--light-blue);
+    font-family: var(--inter-font);
+    font-size: 3.2rem;
+    margin-bottom: 3rem;
+    overflow: auto;
+}
+
+::placeholder {
+    color: var(--light-blue);
+    font-family: var(--inter-font);
+    font-size: 3.2rem;
+}
+
+textarea {
+    resize: none;
+}
+
+.alert__msj {
+    color: var(--yellow);
+    font-weight: bolder;
+    display: flex;
+    align-items: center;
+    gap: .7rem;
+    font-size: 1.3rem;
+    margin-bottom: 1.5rem;
+}
+
+.submit__container {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.form__btn {
+    background: var(--dark-blue);
+    color: var(--main-color);
+    font-size: 1.5rem;
+    font-weight: 600;
+    padding: 1rem 2rem;
+    width: 328px;
+    height: 67px;
+    border-radius: 24px;
+    border: 1px solid var(--dark-blue)
+}
+
+.form__btn--secundary {
+    background: var(--light-blue);
+    color: var(--dark-blue);
+}
+
+.result {
+    background: var(--light-blue);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10rem;
+    height: 72dvh;
+    border-radius: 32px;
+    max-width: 40rem;
+    width: 100%;
+    margin-bottom: 2rem;
+}
+
+.result__title {
+    font-size: 2rem;
+    color: var(--dark-blue);
+}
+
+.result__text {
+    font-size: 2rem;
+    font-weight: bold;  
+    color: var(--dark-blue);  
+}
+
+.result__img {
+    display: block;
+    width: 150px; 
+    height: 150px; 
+    object-fit: contain; 
+}
+
+.footer {
+    background-color: var(--dark-blue);
+    color: var(--main-color);
+    text-align: center;
+    padding: 1rem;
+    font-size: 1.4rem;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+.hidden {
+    display: none;
+}
+
+
+@media screen and (max-width:768px) {
+    main {
+        flex-direction: column;
+    }
+    .submit__container {
+        justify-content: center;
+    }
+    .result {
+        height: auto;
+        min-height: 186px;
+        max-width: 624px;
+        margin-top: 2rem;
+        
+    }
+    .result__img {
+        display: none;
+    }
+    header img {
+        width: 96px;
+        height: 32px;
+    }
+    .footer {
+        position: relative;
+        padding-top: 1rem;
+    }
+}
+
+.loader {
+    width: 50px;
+    aspect-ratio: 1;
+    --_c:no-repeat radial-gradient(farthest-side,#25b09b 92%,#0000);
+    background: 
+      var(--_c) top,
+      var(--_c) left,
+      var(--_c) right,
+      var(--_c) bottom;
+    background-size: 12px 12px;
+    animation: l7 1s infinite;
+}
+
+@keyframes l7 {to{transform: rotate(.5turn)}
+}
+
+.alert__msj span {
+    transition: color 0.3s ease, font-weight 0.3s ease;
+}
+
+.highlight {
+    color: red;
+    font-weight: bold;
+}
+
+.form__btn:disabled {
+    background-color: var(--fondo-deshab);
+    color: var(--color-deshab);
+    cursor: not-allowed;
+}
+
+.form__btn--secundary:disabled {
+    background-color: var(--fondo-deshab);
+    color: var(--color-deshab);
+}
